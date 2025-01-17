@@ -1,50 +1,50 @@
-# React + TypeScript + Vite
+# Task Manager App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple Task Manager app built with **React**, **Vite**, **TypeScript**, and **Tailwind CSS**. It allows users to create, update, delete, mark as completed/incomplete, and sort tasks by priority or date. The app also supports drag-and-drop functionality to reorder tasks. All data is stored in the browser's `localStorage`.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Task List Management**: Create, update, delete, and toggle task completion.
+- **Drag and Drop**: Rearrange tasks via drag-and-drop functionality.
+- **Filtering & Sorting**: Filter tasks by their completion status and sort them by date or priority.
+- **Task Modal**: A modal to create and update tasks.
+- **Task Details**: View detailed information about each task.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**: The core library for building user interfaces.
+- **Vite**: Fast and modern build tool for development and production.
+- **TypeScript**: Provides type safety for JavaScript code.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **React Router**: For routing between the Task List and Task Details pages.
+- **@hello-pangea/dnd**: A library for drag-and-drop functionality in React.
+- **Jest & React Testing Library**: For unit and integration tests.
 
-- Configure the top-level `parserOptions` property like this:
+## Setup Instructions
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+To set up the project locally and run it on your machine, follow the steps below:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Step 1: Clone the Repository
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Start by cloning the repository to your local machine. Use the following command:
+
+- git clone https://github.com/yourusername/task-manager.git
+- cd task-manager 
+
+### Step 2: Install Dependencies
+
+Once inside the project directory, install the required dependencies using either npm or yarn:
+
+- npm install
+
+
+### Step 3: Run the Development Server
+Now that the dependencies are installed, you can start the development server. Run the following command to start the app: 
+
+- npm run dev
+
+
+### Step 4: To run the test 
+
+- npx vitest
